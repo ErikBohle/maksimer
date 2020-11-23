@@ -1,4 +1,38 @@
-h1{
-  color:blue;
+//font = roboto
+* {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
 }
+body {
+  background: #f7f7f7;
+}
+
 // color of sidebar 1A1313
+
+//Container
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+//Main
+.main {
+  left: 20%;
+  margin-left: 200px;
+  position: relative;
+  .title {
+    margin-left: 22;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+//Sidebar
+.sidebar {
+  background-color: #1a1313;
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}

@@ -1,4 +1,43 @@
-h1 {
-  color: blue;
+* {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  background: #f7f7f7;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.main {
+  left: 20%;
+  margin-left: 200px;
+  position: relative;
+}
+
+.main .title {
+  margin-left: 22;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.sidebar {
+  background-color: #1a1313;
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
 /*# sourceMappingURL=style.css.map */
