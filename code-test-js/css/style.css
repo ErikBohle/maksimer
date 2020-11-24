@@ -63,6 +63,20 @@ header .button {
   margin: 1.2em 2em 1.4em 1em;
 }
 
+.sidebar a {
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
 .sidebar .sidebar-links {
   margin-bottom: 1.8em;
 }
@@ -124,29 +138,38 @@ header .button {
 
 .card {
   min-height: 147px;
-  min-width: 300px;
+  min-width: 287px;
   padding: 1.1em 1em;
   width: 287px;
   border: 1px black solid;
+  position: relative;
 }
 
-.card button {
-  display: none;
+.card .button {
+  position: absolute;
+  visibility: hidden;
 }
 
 .card:hover button {
-  display: inline;
+  visibility: visible;
 }
 
 .photo {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
   padding: 0;
+}
+
+.photo button {
+  position: absolute;
 }
 
 .photo img {
   min-width: 287px;
+  min-height: 210px;
   -o-object-fit: fill;
      object-fit: fill;
-  padding-bottom: 0;
 }
 
 .text {
