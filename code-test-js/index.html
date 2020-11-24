@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="script/app.js"></script>
@@ -29,28 +35,74 @@
 Creative
 -->
   <body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <img class="logo" src="images/maksimer-logo.png" alt="Logo" />
+      <hr />
+      <!-- Links -->
+      <li class="current allnotes">
+        <i class="fas fa-layer-group fa-lg current-icon"></i> All Notes
+      </li>
+      <li><i class="far fa-lg fa-file-alt"></i> Notes</li>
+      <li><i class="fas fa-lg fa-image"></i> Images</li>
+      <li><i class="sidebar-links fas fa-lg fa-link"></i> Links</li>
+      <hr />
+      <li class="sidebar-trash"><i class="fas fa-trash-alt"></i> Trash</li>
+      <hr />
+    </nav>
+    <!-- Main -->
     <div class="main">
-      <h1 class="title">All Notes</h1>
-      <p>Alter this through jquery or make new pages?</p>
-      <button class="button">Add New</button>
-      <section class="cards">
-        <article class="card"><p>content</p></article>
+      <!-- Header -->
+      <header>
+        <h1 class="title">All Notes</h1>
+        <button class="button">Add New</button>
+      </header>
+
+      <section class="card-container">
+        
+        <article class="card text">
+          <h1 class="card-title">Title</h1>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis corrupti eveniet, cupiditate, ratione recusandae rerum dolore minima quisquam unde, fuga ullam molestias quam eius! Fugit perspiciatis quibusdam deserunt, aperiam consequuntur recusandae provident. Iste autem ipsam, sit consequuntur quae excepturi magnam aliquam laudantium ea vero, aliquid et unde eaque soluta voluptate.</p>
+          <button>Color</button>
+          <button>Edit</button>
+          <button>Throw</button>
+        </article>
+        <article class="card photo">
+          
+          <img src="https://picsum.photos/200/300" alt="" srcset="">
+          
+          <button>Edit</button>
+          <button>Throw</button>
+        </article>
+        <article class="link card">
+          <p>Link</p>
+          <button>Color</button>
+          <button>Edit</button>
+          <button>Throw</button>
+          <button>Open Link</button>
+        </article>
+        <article class="text card">
+          <h1>Title</h1>
+          <p>text</p>
+          <button>Color</button>
+          <button>Edit</button>
+          <button>Throw</button>
+        </article>
+        <article class="photo card">
+          <p>Photo</p>
+          <button>Color</button>
+          <button>Edit</button>
+          <button>Throw</button>
+        </article>
+        <article class="link card">
+          <p>Link</p>
+          <button>Color</button>
+          <button>Edit</button>
+          <button>Throw</button>
+          <button>Open Link</button>
+        </article>
+      </div>
       </section>
     </div>
-
-    <nav class="sidebar"><p>Logo</p>
-      <hr> 
-      <p>Line doesnt go through width</p>
-      <li>icon All notes</li>
-      <li>icon Notes</li>
-      <li>icon Images</li>
-      <li>icon Links</li>
-      <hr>
-      <p>Line doesnt go through width</p>
-      <li> icon trash</li>
-      <hr>
-      <p>Line doesnt go through width</p>
-    </nav>
-
   </body>
 </html>
