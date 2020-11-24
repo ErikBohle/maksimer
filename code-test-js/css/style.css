@@ -8,7 +8,7 @@ body {
   background: #f7f7f7;
 }
 
-.container {
+.card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,6 +19,7 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  width: 287px;
 }
 
 .main {
@@ -33,11 +34,36 @@ body {
   line-height: 28px;
 }
 
+.main .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  background: #201d1d;
+  -webkit-box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 10px 30px;
+}
+
 .sidebar {
+  color: #EFEFEF;
   background-color: #1a1313;
-  width: 30%;
+  width: 16.6%;
   height: 100%;
   position: absolute;
   top: 0;
+}
+
+.sidebar li {
+  list-style: none;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
