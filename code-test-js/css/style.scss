@@ -1,55 +1,144 @@
 //font = roboto
 * {
-  font-family: Roboto;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
+
+  max-width: 100%;
 }
 body {
   background: #f7f7f7;
 }
+//variables
+$offset: 20%;
 
-// color of sidebar 1A1313
-
-//Container/card
-.card {
+//Header
+header {
+  width: 80%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 287px;
-}
-
-//Main
-.main {
-  left: 20%;
-  margin-left: 200px;
-  position: relative;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-content: space-between;
+  margin: 3em;
   .title {
-    margin-left: 22;
     font-size: 24px;
     line-height: 28px;
   }
   .button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
     color: #fff;
     background: #201d1d;
     box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
     padding: 10px 30px;
+    margin: 10px 0px 10px 10px;
+    align-self: flex-end;
   }
 }
 //Sidebar
 .sidebar {
-  color: #EFEFEF;
+  color: #9a9797;
   background-color: #1a1313;
-  width: 16.6%;
+  width: $offset;
   height: 100%;
   position: absolute;
   top: 0;
-  li{
+  min-width: 135px;
+  li {
     list-style: none;
+    text-align: left;
+    padding-left: 3em;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 1.2em 2em 1.4em 1em;
+  }
+  .sidebar-links {
+    margin-bottom: 1.8em;
+  }
+  .sidebar-trash {
+    margin: 0.8em;
+    font-size: 16px;
+    font-weight: 600;
+    font-weight: 19px;
+  }
+  .allnotes {
+    padding-left: 1em;
+    font-size: 16px;
+    font-weight: 19px;
+  }
+  i {
+    width: 14px;
+    margin-right: 0.8em;
+  }
+  hr {
+    text-align: center;
+    min-width: 50%;
+    margin: 0em 2.5em 0em 2.5em;
+    border: 0.976529px solid #454545;
+  }
+  //logo
+  .logo {
+    margin: 2em auto 1.2em auto;
+    display: block;
+    width: 150px;
+    left: 50px;
     text-align: center;
   }
 }
+//Main
+.main {
+  position: relative;
+  max-width: 100%-$offset;
+  left: $offset;
+  margin: 2em;
+}
+//Container/card
+.card-container {
+  margin-left: 3em;
+  max-width: 100%-$offset;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  grid-auto-rows: auto;
+  grid-gap: 3rem;
+  min-width: 187px;
+}
+.card {
+  min-height: 147px;
+  min-width: 300px;
+  padding: 1.1em 1em;
+  width: 287px;
+  border: 1px black solid;
+  button {
+    display: none;
+  }
+  &:hover{
+    button{
+      display: inline;
+    }
+  }
+}
+//Photo card
+.photo {
+  padding: 0;
+  img {
+    min-width: 287px;
+    object-fit: fill;
+    padding-bottom: 0;
+  }
+}
+//Text card
+.text {
+  background-color: burlywood;
+}
+//link card
+.link {
+  background-color: rosybrown;
+}
+//Current page
+.current {
+  color: #efefef;
+}
+.current-icon {
+  color: #fb7762;
+}
+//temp classes
