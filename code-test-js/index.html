@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<!-- Todo:
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="script/app.js"></script>
+  </head>
+  <!-- Todo:
 #Make responsive cards
 -add color sliders, editing and "delete"
 -images have small border on hover
@@ -27,12 +28,29 @@
 #Mobile view
 Creative
 -->
-<body>
-  <div class="main">
-    <h1 class="title">All Notes</h1>
-    <p>Alter this through jquery or make new pages?</p>
-  </div>
-  
-  <nav class="sidebar">test</nav>
-</body>
+  <body>
+    <div class="main">
+      <h1 class="title">All Notes</h1>
+      <p>Alter this through jquery or make new pages?</p>
+      <button class="button">Add New</button>
+      <section class="cards">
+        <article class="card"><p>content</p></article>
+      </section>
+    </div>
+
+    <nav class="sidebar"><p>Logo</p>
+      <hr> 
+      <p>Line doesnt go through width</p>
+      <li>icon All notes</li>
+      <li>icon Notes</li>
+      <li>icon Images</li>
+      <li>icon Links</li>
+      <hr>
+      <p>Line doesnt go through width</p>
+      <li> icon trash</li>
+      <hr>
+      <p>Line doesnt go through width</p>
+    </nav>
+
+  </body>
 </html>
