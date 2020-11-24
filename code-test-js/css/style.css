@@ -126,22 +126,21 @@ header .button {
   max-width: 80%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (minmax(240px, 3fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 3fr));
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  grid-auto-rows: auto;
-  grid-gap: 3rem;
+  grid-auto-rows: minmax(300px, auto);
+  grid-gap: 3em;
   min-width: 187px;
 }
 
 .card {
-  min-height: 147px;
+  min-height: 210px;
   min-width: 287px;
   padding: 1.1em 1em;
   width: 287px;
-  border: 1px black solid;
   position: relative;
 }
 
@@ -150,8 +149,30 @@ header .button {
   visibility: hidden;
 }
 
-.card:hover button {
+.card:hover .icons {
   visibility: visible;
+}
+
+.icons {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #6491a0;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  padding: 0.5em 0 0.5em;
+}
+
+.icons a {
+  float: left;
+  margin: 0 0 0 1em;
+  opacity: 100%;
+}
+
+.icons a:visited {
+  color: #6491a0;
 }
 
 .photo {
@@ -159,25 +180,47 @@ header .button {
   max-height: 100%;
   height: auto;
   padding: 0;
+  background-image: url(https://picsum.photos/287/210);
 }
 
-.photo button {
+.photo:hover .icons-image {
+  visibility: visible;
+}
+
+.photo .icons-image {
+  visibility: hidden;
   position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: black;
+  opacity: 80%;
+  padding: 0.5em 0 0.5em;
 }
 
-.photo img {
-  min-width: 287px;
-  min-height: 210px;
-  -o-object-fit: fill;
-     object-fit: fill;
+.photo .icons-image a {
+  float: right;
+  margin: 0 1em 0 0;
+  opacity: 100%;
+}
+
+.photo .icons-image a:visited {
+  color: white;
 }
 
 .text {
-  background-color: burlywood;
+  background-color: #d1e9f0;
 }
 
 .link {
-  background-color: rosybrown;
+  background-color: #f7bbbb;
+  min-height: 20px;
+}
+
+.link .link-icon {
+  float: right;
+  margin: 0 1em 0 0;
+  visibility: visible;
 }
 
 .current {
@@ -186,5 +229,99 @@ header .button {
 
 .current-icon {
   color: #fb7762;
+}
+
+@media (pointer: coarse) {
+  .icons {
+    visibility: visible;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+  header {
+    width: 100%;
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .card-container {
+    margin-left: 2em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .sidebar {
+    display: block;
+    width: 30%;
+  }
+  .menu {
+    display: none;
+  }
+  .main {
+    max-width: 90%;
+  }
+  header {
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .card-container {
+    margin-left: 3em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+  .sidebar {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .sidebar {
+    display: block;
+    height: 100%;
+  }
+  .menu {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

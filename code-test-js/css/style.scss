@@ -9,8 +9,10 @@
 body {
   background: #f7f7f7;
 }
+
 //variables
 $offset: 20%;
+//mixins
 
 //Header
 header {
@@ -51,13 +53,13 @@ header {
     line-height: 16px;
     margin: 1.2em 2em 1.4em 1em;
   }
-  a{
+  a {
     text-decoration: none;
-    &:hover{
+    &:hover {
       text-decoration: none;
       color: inherit;
     }
-    &:visited{
+    &:visited {
       text-decoration: none;
       color: inherit;
     }
@@ -107,52 +109,94 @@ header {
   margin-left: 3em;
   max-width: 100%-$offset;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 3fr));
   align-items: start;
-  grid-auto-rows: auto;
-  grid-gap: 3rem;
+  grid-auto-rows: minmax(300px, auto);
+  grid-gap: 3em;
   min-width: 187px;
 }
 .card {
-  min-height: 147px;
+  min-height: 210px;
   min-width: 287px;
   padding: 1.1em 1em;
   width: 287px;
-  border: 1px black solid;
+
   position: relative;
   .button {
-    
     position: absolute;
     visibility: hidden;
   }
   &:hover {
-    button {
+    .icons {
       visibility: visible;
+    }
+  }
+}
+.icons {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #6491a0;
+  //Turn the color into the same value as background color then invert
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  padding: 0.5em 0 0.5em;
+
+  a {
+    float: left;
+    margin: 0 0 0 1em;
+    opacity: 100%;
+    &:visited {
+      color: #6491a0;
     }
   }
 }
 //Photo card
 .photo {
-  max-width:100%;
-  max-height:100%;
+  max-width: 100%;
+  max-height: 100%;
   height: auto;
   padding: 0;
-  button{
-    position: absolute;
+  background-image: url(https://picsum.photos/287/210);
+  &:hover {
+    .icons-image {
+      visibility: visible;
+    }
   }
-  img {
-    min-width: 287px;
-    min-height: 210px;
-    object-fit: fill;
+  .icons-image {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: black;
+    opacity: 80%;
+    padding: 0.5em 0 0.5em;
+    a {
+      float: right;
+      margin: 0 1em 0 0;
+      opacity: 100%;
+      &:visited {
+        color: white;
+      }
+    }
   }
 }
 //Text card
 .text {
-  background-color: burlywood;
+  background-color: #d1e9f0;
 }
 //link card
 .link {
-  background-color: rosybrown;
+  background-color: #f7bbbb;
+  min-height: 20px;
+  .link-icon {
+    float: right;
+    margin: 0 1em 0 0;
+    visibility: visible;
+  }
 }
 //Current page
 .current {
@@ -161,4 +205,89 @@ header {
 .current-icon {
   color: #fb7762;
 }
-//temp classes
+gith
+// Media Queries
+
+// Detect if user has a touch device and make hover icons visible
+@media (pointer: coarse) {
+  .icons{visibility: visible;}
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+  header {
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+  }
+  .card-container {
+    margin-left: 2em;
+    align-items: center;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .sidebar {
+    display: block;
+    width: $offset + 10%;
+  }
+  .menu {
+    display: none;
+  }
+  .main {
+    max-width: 90%;
+  }
+  header {
+    margin: 0;
+    justify-content: center;
+  }
+  .card-container {
+    margin-left: 3em;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+  .sidebar {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .sidebar {
+    display: block;
+    height: 100%;
+  }
+  .menu {
+    display: none;
+  }
+}
