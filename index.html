@@ -12,7 +12,6 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="script/app.js"></script>
   </head>
   <body>
     <!-- Sidebar -->
@@ -42,13 +41,48 @@
       </ul>
       <hr />
     </nav>
+    <!-- Modal/popup -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <h1>Add note</h1>
+        <p>What note would you like to add?</p>
+        <form action="post">
+          <!-- Radio buttons -->
+          <input type="radio" name="add" id="note-radio" />
+          <label for="note-radio">Note + icon</label>
+          <input type="radio" name="add" id="image-radio" />
+          <label for="image-radio">image + icon</label>
+          <input type="radio" name="add" id="links-radio" />
+          <label for="links-radio">Links + icon</label> <br>
+          <!-- note setup -->
+          <label for="title-input">Title</label>
+          <input type="text" name="title" id="title-input" />
+          <label for="note-input">note</label>
+          <input type="text" name="note" id="note-input" />
+        
+        <!-- image setup -->
+        <label class="image-url" for="image-url">Image URL</label><br />
+        <input class="image-url" type="text" name="image-url" id="image-url" />
+        <!-- Link setup -->
+        <label class="link-url" for="link-url">link URL</label>
+        <input class="link-url"  type="text" name="link-url" id="link-url" />
+      </form>
+        <!-- CLOSE + ADD BUTTON -->
+        <div class="modal-buttons">
+          <span class="close">Cancel</span>
+          <button class="addbutton">Add Note</button>
+        </div>
+      </div>
+    </div>
     <!-- Main -->
     <div class="main">
       <!-- Header -->
       <header>
         <button class="menu">menu</button>
         <h1 class="title">All Notes</h1>
-        <button class="button addnew">Add New</button>
+        <button id="myBtn" class="addbutton addnew">Add New</button>
       </header>
 
       <section class="card-container">
@@ -73,7 +107,7 @@
             <a href=""><i class="far fa-lg fa-edit"></i></a>
           </div>
         </article>
-        <!-- Link card -->
+        <!-- Link -->
         <article class="link card">
           <p>Link</p>
           <div class="icons">
@@ -104,5 +138,6 @@
         </article>
       </section>
     </div>
+    <script src="script/app.js"></script>
   </body>
 </html>
