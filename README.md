@@ -1,5 +1,4 @@
 ###Reflection
-Due to time constraints i will outline the plan for the last parts of the website.
 
 ##The sidebar doesn't update to show which page is active, this can be done through either the use of several pages or dom manipulation.
 
