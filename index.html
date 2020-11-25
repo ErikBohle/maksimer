@@ -14,26 +14,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="script/app.js"></script>
   </head>
-  <!-- Todo:
-#Make responsive cards
--add color sliders, editing and "delete"
--images have small border on hover
-#Make sidebar
--Maksimer logo also a link to all notes
--All notes
-*Indented children
-#Add new note button
-- Modal that open also on edit
-*Three different modals?
-*Same modal but change classes?
-#Trash 
--clear trash button removes contents
--ability to restore contents
--button to all notes when empty
--image when empty
-#Mobile view
-Creative
--->
   <body>
     <!-- Sidebar -->
     <nav class="sidebar">
@@ -72,6 +52,7 @@ Creative
       </header>
 
       <section class="card-container">
+        <!-- text card -->
         <article class="card text">
           <h1 class="card-title">Title</h1>
           <p>
@@ -85,12 +66,14 @@ Creative
             <a href=""><i class="fas fa-lg fa-trash-alt"></i></a>
           </div>
         </article>
+        <!-- image / photo card -->
         <article class="photo card">
           <div class="icons-image">
             <a href=""><i class="fas fa-lg fa-trash-alt"></i> </a>
             <a href=""><i class="far fa-lg fa-edit"></i></a>
           </div>
         </article>
+        <!-- Link card -->
         <article class="link card">
           <p>Link</p>
           <div class="icons">

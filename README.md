@@ -8,7 +8,11 @@ Due to time constraints i will outline the plan for the last parts of the websit
 ##Ways to reach "masonry grid"
 Currently the cards don't fall in line by size, This could be mitigated through a column layout and set heights rather than widths, but would not fit here.
 
+#The cards also needs to follow the headers width
+
 ##Modal
+3 layouts changing with radio-inputs.
+Same confirmation screen
 
 ##Sliders for color
 
@@ -19,5 +23,3 @@ In the end the icons can use the same color value as the background and then inv
 ##Easy improvements
 Repeat less code through mixins and variables.
 
-###Libraries used
-##Fontawesome

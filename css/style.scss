@@ -1,9 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
 //font = roboto
 * {
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-
   max-width: 100%;
 }
 body {
@@ -104,21 +102,21 @@ header {
   left: $offset;
   margin: 2em;
 }
-//Container/card
+//Card container
 .card-container {
   margin-left: 3em;
   max-width: 100%-$offset;
   display: grid;
-  grid-template-columns:  287px 287px 287px;
+  grid-template-columns: 287px 287px 287px;
   align-items: start;
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 3em;
-  
 }
+//card
 .card {
   min-height: 210px;
   min-width: 287px;
-  
+
   width: 287px;
 
   position: relative;
@@ -187,11 +185,11 @@ header {
 //Text card
 .text {
   background-color: #d1e9f0;
-  p, h1 {
+  p,
+  h1 {
     padding: 1em 0 0 1em;
-    
   }
-  p{
+  p {
     padding-bottom: 1.2em;
   }
 }
@@ -199,13 +197,13 @@ header {
 .link {
   background-color: #f7bbbb;
   min-height: 50px;
-  
+
   .link-icon {
     float: right;
     margin: 0 1em 0 0;
     visibility: visible;
   }
-  p{
+  p {
     padding: 1em;
   }
 }
@@ -251,7 +249,6 @@ header {
 @media only screen and (min-width: 600px) and (max-width: 767px) {
   .sidebar {
     display: none;
-    
   }
   .menu {
     display: block;
@@ -269,25 +266,22 @@ header {
   .sidebar {
     display: block;
     width: $offset + 10%;
-    
   }
   .menu {
     display: none;
   }
   .main {
     max-width: 90%;
-    left: $offset
-    
+    left: $offset;
   }
   header {
     margin: 0;
     justify-content: center;
   }
   .card-container {
-    
     margin-left: 5em;
     align-items: center;
-    grid-template-columns:  1fr;
+    grid-template-columns: 1fr;
   }
 }
 

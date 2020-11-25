@@ -1,7 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
 * {
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
   max-width: 100%;
 }
 
@@ -210,7 +209,8 @@ header .button {
   background-color: #d1e9f0;
 }
 
-.text p, .text h1 {
+.text p,
+.text h1 {
   padding: 1em 0 0 1em;
 }
 
